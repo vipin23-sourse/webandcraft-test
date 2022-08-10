@@ -20,6 +20,9 @@
     @include respond(laptop) {
         padding-top: 1.5rem;
     }
+    @include respond(tab-port) {
+        min-height: auto
+    }
     @include respond(phone) {
        min-height: auto;
        padding-top: 0;
@@ -108,7 +111,7 @@
         -webkit-text-fill-color: transparent;
         background-size: 200%;
         background-repeat: no-repeat;
-        animation: gradient-anim 6s linear;
+        animation: gradient-anim 4000ms linear;
         animation-fill-mode: both;
         animation-iteration-count: infinite;
         backface-visibility: hidden;
@@ -170,9 +173,9 @@
 
 .link-wrap {
     text-align: center;
-    margin-top: 6rem;
+    padding: 6rem 0;
     @include respond(phone) {
-       margin: 2rem 0;
+       padding: 2rem 0;
         text-align: end;
         img{
             width: 30px;
@@ -525,6 +528,10 @@
         border: 1px solid var(--color-secondary);
         margin-top: 7rem;
         margin-bottom: 6rem;
+
+        @include respond(phone){
+            visibility: hidden;
+        }
         
 
     }

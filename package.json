@@ -1,0 +1,35 @@
+{
+  "name": "webandcraft-test",
+  "version": "1.0.0",
+  "description": "Building a website using Eleventy and Nunjucks",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --source-map --watch src/sass:public/css",
+    "build:sass": "sass  --no-source-map src/sass:public/css",
+    "minifyJS": "uglifyjs src/js/main.js --compress --mangle --warn --output public/js/main.min.js",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "postbuild": "postcss public/css/*.css -u autoprefixer cssnano -r --no-map",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:sass minifyJS build:eleventy"
+  },
+  "author": "vipin",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.1",
+    "autoprefixer": "^10.4.8",
+    "cssnano": "^5.1.12",
+    "minify": "^9.1.0",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.14",
+    "postcss-cli": "^10.0.0",
+    "sass": "^1.54.3",
+    "uglify-js": "^3.16.3"
+  },
+  "browserslist": [
+    "last 2 versions"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy-img": "^2.0.1"
+  }
+}

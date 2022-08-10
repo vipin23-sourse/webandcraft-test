@@ -1,0 +1,49 @@
+{% set currentUrl %}{{ page.url }}{% endset %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__head">
+            <div class="footer__head-content">
+                <h3>Join the Green Squad</h3>
+                <p>To receive exclusive Green Meat offers, updates and more.</p>
+            </div>
+            <form action="" class="join-form">
+                <fieldset>
+                    <label class="sr-only" for="email">Email</label>
+                    <input id="email" type="email" placeholder="Email">
+                    <input class="btn btn--primary" type="button" aria-label="submit" value="SEND">
+                </fieldset>
+            </form>
+        </div>
+        <hr>
+        <div class="footer__middle">
+            {% image "src/images/logo.svg", "", "logo" %}
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__item"><a href="#" class="navigation__link active">Home</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">The Promise</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Food For</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Spotlight</a></li>
+                    <li class="navigation__item"><a href="#" class="navigation__link">Who We Are</a></li>
+                </ul>
+            </nav>
+            <ul class="social-icon">
+                <li class="social-icon__item"><a href="#" class="social-icon__link">
+                        <svg class="icon">
+                            <use xlink:href="images/sprite.svg#Icon-twitter"></use>
+                        </svg>
+                    </a></li>
+                <li class="social-icon__item"><a href="#" class="social-icon__link"><svg class="icon">
+                            <use xlink:href="images/sprite.svg#Icon-facebook"></use>
+                        </svg></a></li>
+                <li class="social-icon__item"><a href="#" class="social-icon__link"><svg class="icon">
+                            <use xlink:href="images/sprite.svg#Icon-instagram"></use>
+                        </svg></a></li>
+                <li class="social-icon__item"><a href="#" class="social-icon__link"><svg class="icon">
+                            <use xlink:href="images/sprite.svg#Icon-youtube"></use>
+                        </svg></a></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+</footer>

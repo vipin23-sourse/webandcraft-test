@@ -1,0 +1,31 @@
+.heading-primary{
+    font-size: clamp(5rem,7vw, 14.5rem);
+    @extend%font-w-600;
+    color: var(--color-white);
+    line-height: 1.1;
+    animation: moveInBottom 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    span{
+        display: block;
+        &:nth-child(2){
+            color: var(--color-green-yellow);
+            display: inline-block;
+        }
+       
+    }
+}
+
+.heading-secondary{
+    font-size: clamp(5rem, 8vw, 16.1rem);
+    @extend%font-w-600;
+}
+.heading-tertiary{
+    @extend%font-w-600;
+    font-size: clamp(5rem, 7vw, 14rem);
+    color: var(--color-white);
+    line-height: 1.1;
+    span{
+        display: block;
+        color: var(--color-green-light-1);
+
+    }
+}

@@ -1,0 +1,33 @@
+.navigation{
+    margin-inline-end: 1.2rem;
+    margin-inline-start: auto;
+   
+    @include respond(phone) {
+        display: none;
+    }
+    &__list{
+    }
+    &__item{
+        display: inline-block;
+    }
+    &__link{
+        display: inline-block;
+        font-size: 1.8rem;
+        padding: 1.2rem 2.5rem;
+        @extend%font-w-500;
+        &:hover{
+            @extend%font-w-700;
+        }
+        &:focus{
+            @extend%font-w-700;
+            outline: 1px solid var(--color-white);
+        }
+        &.active{
+            @extend%font-w-700;
+
+        }
+        @include respond(tab-port) {
+            padding: .8rem 1rem;
+        }
+    }
+}

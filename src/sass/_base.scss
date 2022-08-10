@@ -1,0 +1,312 @@
+*,
+*::after,
+::before {
+    box-sizing: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+:root {
+    --color-primary: hsl(161, 91%, 17%);
+    --color-secondary: hsl(60, 4%, 11%);
+    --color-white:hsl(0, 0%, 100%);
+    --color-green-light:hsl(120, 100%, 34%); 
+    --color-green-light-1:hsl(83, 62%, 45%);
+    --color-green-yellow:hsl(61, 100%, 43%);
+    --color-black:hsl(0, 0%, 0%);
+    --w-row: 136.9rem;
+    --font-primary: 'Exo', sans-serif; 
+    --font-weight-300: 300;
+    --font-weight-400: 400;
+    --font-weight-500: 500;
+    --font-weight-600: 600;
+    --font-weight-700: 700;
+    --border-radius: 1.5rem;
+    
+}
+
+
+%font-w-700 {
+    font-weight: var(--font-weight-700);
+}
+
+%font-w-600 {
+    font-weight: var(--font-weight-600);
+}
+
+%font-w-500 {
+    font-weight: var(--font-weight-500);
+}
+
+%font-w-400 {
+    font-weight: var(--font-weight-400);
+}
+
+%font-w-300 {
+    font-weight: var(--font-weight-300);
+}
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==phone {
+        @media only screen and (max-width: 43.75em) {
+            @content
+        }
+
+        ; //700px
+    }
+
+    @if $breakpoint==tab-port {
+        @media only screen and (max-width: 56.25em) {
+            @content
+        }
+
+        ; //900px
+    }
+
+    @if $breakpoint==tab-land {
+        @media only screen and (max-width: 75em) {
+            @content
+        }
+
+        ; //1200px
+    }
+
+    @if $breakpoint==laptop {
+        @media only screen and (max-width: 90em) {
+            @content
+        }
+
+        ; //1440px
+    }
+    @if $breakpoint==desktop {
+        @media only screen and (min-width: 90em) {
+            @content
+        }
+
+        ; //min-width 1440px
+    }
+}
+
+
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+
+
+    @include respond(tab-land) {
+        font-size: 56%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 50%;
+    }
+    @include respond(phone) {
+        font-size: 62.5%;
+    }
+
+}
+
+body {
+    box-sizing: border-box;
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+    line-height: 1.6;
+    overflow-x: hidden;
+    color: var(--color-white);
+}
+
+main{
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.container {
+    max-width: var(--w-row);
+    margin: 0 auto;
+    padding: 0 15px;
+    
+    @include respond(laptop) {
+        --w-row:120rem;
+    }
+
+    @include respond(phone) {
+        
+    }
+}
+
+
+// skip navigation
+.skip-navigation {
+    position: absolute;
+    padding: 1rem;
+    background-color: #000;
+    color: #fff;
+    transform: translateY(-120px);
+    margin-left: 10rem;
+    z-index: 999;
+    transition: all 300ms ease-in-out;
+    &:focus {
+        transform: translateY(0);
+    }
+}
+.slider{
+    width: 68.2rem;
+    @include respond(laptop){
+        max-width: 60rem;
+    }
+    @include respond(phone){
+        width: 90vw;
+    }
+    .slick-initialized .slick-slide img{
+
+     }
+     .slick-slide{
+        margin: 0 1rem;
+     }
+     .slick-list{
+        width: 100%;
+     }
+}
+.promise-slider__item.slick-slide{
+    display: grid;
+}
+.promise-slider{
+    .slick-list{
+        overflow: visible;
+        margin: 3rem 0;
+    }
+    .slick-initialized .slick-slide{
+        display: grid !important;
+    }
+    .slick-dots {
+        transform: translateY(-12rem);
+        position: relative ;
+        z-index: 5;
+        
+    
+        @include respond(laptop) {
+            transform: translateY(0);
+        }
+    
+        @include respond(tab-land) {
+        }
+    
+        @include respond(tab-port) {
+    
+        }
+    
+        @include respond(phone) {
+            margin-top: 3rem;
+        }
+    }
+    
+    
+    .slick-dots li.slick-active button {
+        background: var(--color-green-yellow);
+        width: 2.6rem;
+        border-radius: 5px;
+    }
+    
+    .slick-dots li button {
+        display: inline-block;
+        border-radius: 50%;
+        color: transparent;
+        padding: 0;
+        border: none;
+        box-shadow: none;
+        cursor: pointer;
+        background-color: hsla(0, 0%, 100%, 30%);
+        width: 10px;
+        height: 10px;
+        transition: all .3s ease-in-out;
+    }
+    
+    .slick-dots li {
+        margin: 0;
+        display: inline-block;
+    
+        &:not(:last-child) {
+            margin-right: 5rem;
+        }
+    }
+    
+}
+
+// animation
+
+@keyframes moveInBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes gradient-anim {
+    0% {
+        background-position: 97%;
+    }
+
+    100% {
+        
+    }
+}
+
+.sr-only:not(:focus):not(:active) {
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap; 
+    width: 1px;
+  }
+
+  .fixed-nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    box-shadow: 0 5px 10px hsla(0, 0%, 0%, 0.156);
+}
+
+.mobile-menu{
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    @include respond(phone){
+        display: flex;
+    }
+    
+    span{
+        width: 29px;
+        height: 2px;
+        display: block;
+        background-color: var(--color-white);
+        margin: 3px 0;
+        border-radius: 1px;
+    }
+    
+}

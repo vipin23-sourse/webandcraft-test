@@ -1,0 +1,135 @@
+---
+layout: template.njk
+title: Home
+pagetitle: Home
+permalink: "{{ page.filePathStem | replace('/root/', '/') }}.html"
+---
+{% include "header.njk" %}
+<main role="content" aria-label="main content" id="main-content">
+  <section class="banner" aria-label="banner">
+    <div class="container">
+      <div class="banner__wrap">
+        <div class="banner__start">
+          <h1 class="heading-primary"><span>Guilt-free</span> <span> meat</span> for those <span>who care</span></h1>
+          <button class="btn btn--primary">ABOUT US</button>
+        </div>
+        <div class="banner__end slider">
+          <ul class="slider__list one-item-main">
+            <li class="slider__item">
+                {% image "src/images/slider-1.png", "b-slider", "slider-1", "(min-width: 30em) 50vw, 100vw" %}
+            </li>
+            <li class="slider__item">
+              {% image "src/images/slider-2.png", "b-slider", "slider-2", "(min-width: 30em) 50vw, 100vw" %}
+            </li>
+            <li class="slider__item">
+              {% image "src/images/slider-3.png", "b-slider", "slider-3", "(min-width: 30em) 50vw, 100vw" %}
+            </li>
+            <li class="slider__item">
+              {% image "src/images/slider-4.png", "b-slider", "slider-4", "(min-width: 30em) 50vw, 100vw" %}
+            </li>
+          </ul>
+            {% image "src/images/certificate.svg", "slider__certficate-img", "100% plant based" %}
+          <div class="slider__numbers">
+            <span class="slider__num">01</span><span class="slider__total-num">05</span>
+          </div>
+        </div>
+      </div>
+      <div class="link-wrap">
+        <a class="arrow-down" href="#promise" role="link" aria-label="go to promise">{% image "src/images/icon-arrow.svg", "", "Down arrow" %}</a>
+      </div>
+    </div>
+  </section>
+
+  <article id="promise" class="promise">
+    <section class="the-promise">
+      <div class="container">
+        <div class="the-promise__title">
+          {% image "src/images/icon-promise.png", "", "Handshake", "(min-width: 30em) 50vw, 100vw" %}
+          <h2 class="heading-secondary">
+            The Promise
+          </h2>
+        </div>
+        <div class="the-promise__grid">
+          <div class="the-promise__content">
+            <p>Did you know that every 100 gms of Chicken you eat adds up to {{number}} of GHG Emissions of CO2,
+              {{value}} of trees, and {{value}} of water? We have still not considered the run-off from an Industrial
+              grade animal/poultry farm into our precious soil and groundwater that can eventually reach us! Add to
+              that, the price we pay for healthcare!</p>
+            <a class="btn btn--border-green" href="http://">EXPLORE <span class="arrow-right"></span></a>
+          </div>
+          <div class="the-promise__image-end">
+            
+              {% image "src/images/food-2.jpg", "", "Chicken Curry in bowl", "(min-width: 30em) 50vw, 60vw" %}
+            
+          </div>
+          <div class="the-promise__image-start">
+            
+              {% image "src/images/food-1.jpg", "", "Chicken Curry in bowl", "(min-width: 30em) 50vw, 60vw" %}
+            
+          </div>
+          <div class="the-promise__blockquote">
+            <blockquote>
+              “ Quote Dummy Text Did you know that every 100 gms of Chicken you eat adds up “
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="we-promise">
+      <div class="container">
+        <span class="we-promise__sub-text">We Promise</span>
+        <ul class="promise-slider one-item">
+          <li class="promise-slider__item">
+            <div class="promise-slider__start">
+              <h3 class="heading-tertiary">
+                Better<span>Earth</span>
+              </h3>
+              <p>Thanks to The Green Meat, you have a healthier and guilt-free alternative that also creates an impactful
+                difference to the environment by reducing a significant amount of Green House Gas Emissions.</p>
+            </div>
+            <div class="promise-slider__end">
+              {% image "src/images/earth.svg", "", "Protect The Environment - Save Our Environment" %}
+            </div>
+          </li>
+          <li class="promise-slider__item">
+            <div class="promise-slider__start">
+              <h3 class="heading-tertiary">
+                Better<span>Earth</span>
+              </h3>
+              <p>Thanks to The Green Meat, you have a healthier and guilt-free alternative that also creates an impactful
+                difference to the environment by reducing a significant amount of Green House Gas Emissions.</p>
+            </div>
+            <div class="promise-slider__end">
+              {% image "src/images/earth.svg", "", "Protect The Environment - Save Our Environment" %}
+            </div>
+          </li>
+          <li class="promise-slider__item">
+            <div class="promise-slider__start">
+              <h3 class="heading-tertiary">
+                Better<span>Earth</span>
+              </h3>
+              <p>Thanks to The Green Meat, you have a healthier and guilt-free alternative that also creates an impactful
+                difference to the environment by reducing a significant amount of Green House Gas Emissions.</p>
+            </div>
+            <div class="promise-slider__end">
+              {% image "src/images/earth.svg", "", "Protect The Environment - Save Our Environment" %}
+            </div>
+          </li>
+          <li class="promise-slider__item">
+            <div class="promise-slider__start">
+              <h3 class="heading-tertiary">
+                Better<span>Earth</span>
+              </h3>
+              <p>Thanks to The Green Meat, you have a healthier and guilt-free alternative that also creates an impactful
+                difference to the environment by reducing a significant amount of Green House Gas Emissions.</p>
+            </div>
+            <div class="promise-slider__end">
+              {% image "src/images/earth.svg", "", "Protect The Environment - Save Our Environment" %}
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </article>
+</main>
+{%include "footer.njk" %}

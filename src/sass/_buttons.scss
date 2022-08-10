@@ -1,0 +1,33 @@
+
+.btn{
+    border: 1px solid var(--color-white);
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+    min-width: 13.6rem;
+    padding: 1.6rem 3.2rem;
+    border-radius: 2.8rem;
+    color: var(--color-white);
+    @include respond(phone){
+        min-width: 10rem;
+    }
+
+
+    &:focus{
+        outline: auto;
+    }
+    &--primary{
+        background-color: var(--color-green-light);
+        border: none;
+    }
+
+    &--border-green{
+        border-color: var(--color-green-light);
+    }
+
+    &--arrow{
+        display: inline-flex;
+        align-items: center;
+    }
+
+}

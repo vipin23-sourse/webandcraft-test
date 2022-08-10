@@ -1,0 +1,30 @@
+// mixin
+
+.header{
+    background-color: var(--color-primary);
+    padding: 2.5rem 0;
+    
+    &__wrap{
+        display: flex;
+        align-items: center;
+        @include respond(phone){
+            justify-content: space-between;
+        }
+    }
+
+    &__logo{
+        margin-inline-end: 3rem;
+        display: flex;
+    }
+
+    &__logo-img{
+        @include respond(phone){
+            height: 5rem;
+        }
+    }
+    .btn{
+        @include respond(phone) {
+            display: none;
+        }
+    }
+}
